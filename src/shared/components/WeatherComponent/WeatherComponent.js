@@ -1,8 +1,8 @@
-import useWeatherComponent from './useWeatherComponent';
 import moment from '@utils/moment';
+import useWeatherComponent from './useWeatherComponent';
 
 const WeatherComponent = ({ active, onClick, data }) => {
-  const { date, crTempreture, humidity, windSpeed, lowestTemp, highestTemp, icon, id } = data;
+  const { date, crTempreture, humidity, windSpeed, lowestTemp, highestTemp, icon } = data;
 
   const {} = useWeatherComponent();
 
