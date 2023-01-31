@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.title-shadow {
+  @apply absolute -top-2 left-1/2 -translate-x-1/2 text-[28px] md:text-[70.02px] leading-[48px] md:leading-[105px] tracking-[2px] block w-full text-center uppercase font-semibold text-para opacity-5 -z-10;
+}
+
+.weather-table tr {
+  @apply border-b border-[#D8D8D8] last:border-b-0;
+}
+
+.weather-table th {
+  @apply py-2 md:py-4 px-4 text-para text-lg font-medium whitespace-nowrap;
+}
+
+.weather-table td {
+  @apply text-center text-para text-lg py-2 md:py-4 px-4 whitespace-nowrap;
+}
+
+.weather-table td img {
+  @apply w-14 h-14 mx-auto;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  @apply bg-primary;
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+.carousle-slider {
+  @apply mb-6 md:mb-[56px] flex overflow-x-auto gap-4 pl-40 pt-2 pb-5 relative;
+}
+
+.carousle-slider::-webkit-scrollbar {
+  @apply hidden;
+}
+
+.weather-card {
+  @apply bg-white p-[24px] min-w-[420px] rounded-2xl shadow-md cursor-pointer text-para;
+  box-shadow: -4px 4px 8px 0px #0000000f;
+}
+
+.weather-card.active {
+  @apply bg-primary text-white;
+}
+
+@media screen and (min-width: 1500px) {
+  .container {
+    max-width: 100% !important;
+  }
+  .container:not(.p-0) {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+  }
+}
+
+.form-control {
+  @apply border w-full h-10 rounded-md text-[14px] px-4 outline-none active:border-primary focus:border-primary;
+}
+
+.btn {
+  @apply bg-primary text-white text-[14px] font-medium rounded-md px-4 py-2 cursor-pointer;
+}
